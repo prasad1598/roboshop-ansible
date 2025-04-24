@@ -1,0 +1,26 @@
+# cp rabbitmq.repo /etc/yum.repos.d/rabbitmq.repo
+# dnf install rabbitmq-server -y
+#
+# systemctl enable rabbitmq-server
+# systemctl start rabbitmq-server
+#
+# rabbitmqctl add_user roboshop roboshop123
+# rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*"
+#
+
+
+- name: Coping nginx config file
+  ansible.builtin.copy:
+    src: rabbitmq.repo
+    dest: /etc/yum.repos.d/rabbitmq.repo
+
+- name: Install rabbitmq-server
+  ansible.buildin.dnf:
+    name: rabbitmq-server
+    state: latest
+
+- name: Start & enable service
+  ansible.buildin.systemd_service:
+    name: rabbitmq-server
+    state: started
+    enabled: yes
