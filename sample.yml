@@ -1,0 +1,6 @@
+- name: sample print file
+  hosts: all
+  tasks:
+    - name: print sample file
+      ansible.builtin.debug:
+        msg: This file is from ansible playbook
