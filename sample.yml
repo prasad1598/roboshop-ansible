@@ -20,3 +20,18 @@
         msg: This file is from ansible playbook url - {{url}}
       vars:
         url: www.prasaddevops.shop
+
+
+
+- name: string level var sample
+  hosts: localhost
+  connection: local
+  vars:
+    url:
+      x: 100
+      y: 200
+      z: 300
+  tasks:
+    - name: print string sample file
+      ansible.builtin.debug:
+        msg: x - {{x}}, y - {{y}}, z - {{z}}
