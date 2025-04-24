@@ -11,6 +11,9 @@
 #systemctl restart nginx
 
 
-- name: configure nginx service
-  host: 172-31-93-163
-  
+- name: Disable default Nginx & Enable Nginx 1.24
+  ansible.builtin.command: dnf module disable nginx -y
+  ansible.builtin.command: dnf module enable nginx:1.24 -y
+
+
+
