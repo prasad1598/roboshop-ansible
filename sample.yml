@@ -1,6 +1,9 @@
 - name: sample print file
-  hosts: all
+  hosts: localhost
+  connection: local
+  vars:
+    url: www.prasaddevops.shop
   tasks:
     - name: print sample file
       ansible.builtin.debug:
-        msg: This file is from ansible playbook
+        msg: This file is from ansible playbook url - {{url}}
