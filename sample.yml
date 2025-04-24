@@ -10,7 +10,7 @@
 
 
 
-- name: sample print file
+- name: task level var sample
   hosts: localhost
   connection: local
 
