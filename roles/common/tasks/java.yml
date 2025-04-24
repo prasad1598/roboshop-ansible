@@ -5,3 +5,18 @@
 #    mvn clean package
 #    mv target/shipping-1.0.jar shipping.jar
 #  }
+
+- name: Install maven
+  ansible.builtin.dnf:
+    name: maven
+    state: present
+
+- name: Copy service file
+  ansible.builtin.copy:
+    src: /etc/systemd/system/${component_name}.service
+    dest: ${pwd}/${component_name}.service
+
+- name: maven packageing
+  ansible.builtin.shell: mvn clean package
+
+- name:

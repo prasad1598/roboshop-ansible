@@ -2,3 +2,15 @@
 #    dnf install golang -y
 #    cp ${pwd}/${component_name}.service /etc/systemd/system/${component_name}.service
 #  }
+
+
+- name: Install golany
+  ansible.builtin.dns:
+    name: golang
+    state: present
+    enabled: yes
+
+- name: Copy service file
+  ansible.builtin.copy:
+    src: ${pwd}/${component_name}.service
+    dest: /etc/systemd/system/${component_name}.service

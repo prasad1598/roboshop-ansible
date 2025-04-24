@@ -10,4 +10,22 @@
 # mongosh --host mongodb-dev.prasaddevops.shop </app/db/master-data.js
 
 
+- name: Run Nodejs
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: nodejs
 
+- name: Run Systemd_setup
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: systemd_setup
+
+- name: Copy service file
+  ansible.builtin.copy:
+    src: /etc/yum.repos.d/mongo.repo
+    dest: ${pwd}/mongo.repo
+
+- name: install mongodb
+  ansible.builtin.dnf:
+    name: mongodb-mongosh
+    state: present
