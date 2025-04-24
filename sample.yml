@@ -27,7 +27,6 @@
   hosts: localhost
   connection: local
   vars:
-    url:
       x: 100
       y: 200
       z: 300
