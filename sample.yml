@@ -7,3 +7,16 @@
     - name: print sample file
       ansible.builtin.debug:
         msg: This file is from ansible playbook url - {{url}}
+
+
+
+- name: sample print file
+  hosts: localhost
+  connection: local
+
+  tasks:
+    - name: print sample file
+      ansible.builtin.debug:
+        msg: This file is from ansible playbook url - {{url}}
+      vars:
+        url: www.prasaddevops.shop
