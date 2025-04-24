@@ -34,3 +34,20 @@
     - name: print string sample file
       ansible.builtin.debug:
         msg: x - {{x}}, y - {{y}}, z - {{z}}
+
+
+- name: var declaration sample
+  hosts: localhost
+  connection: local
+  vars:
+    x: 506132
+    y:
+      - 100
+      - 200
+    z:
+      domine: www.prasaddevops.shop
+      file: sample.yaml
+  tasks:
+    - name: print string sample file
+      ansible.builtin.debug:
+        msg: x - {{x}}, y - {{y[0]}}, z - {{z[1]}}
