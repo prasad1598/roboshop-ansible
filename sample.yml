@@ -27,9 +27,9 @@
   hosts: localhost
   connection: local
   vars:
-      x: 100
-      y: 200
-      z: 300
+    x: 100
+    y: 200
+    z: 300
   tasks:
     - name: print string sample file
       ansible.builtin.debug:
