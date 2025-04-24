@@ -3,3 +3,17 @@
 #    app_pre-req
 #    pip3 install -r requirements.txt
 #  }
+
+- name: Install python
+  ansible.builtin.dns:
+    name: python3 gcc python3-devel
+    state: present
+
+- name: Add App pre-requisites
+  ansible.builtin.include_tasks:
+    file: app_pre-req
+
+#- name: Install Python packages from requirements.txt
+#  ansible.builtin.pip:
+#    requirements: /path/to/requirements.txt
+#    executable: pip3

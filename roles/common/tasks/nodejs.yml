@@ -13,7 +13,7 @@
     state: present
 
 - name: Load app Pre-Requisites
-  ansible.builtin.include_role:
+  ansible.builtin.include_tasks:
     file: app_pre-req
 
 - name: Install packages based on package.json.

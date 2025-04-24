@@ -16,7 +16,12 @@
     src: /etc/systemd/system/${component_name}.service
     dest: ${pwd}/${component_name}.service
 
+- name: Load App pre-requisites
+  ansible.builtin.include_tasks:
+    file: app_pre-req
+
 - name: maven packageing
   ansible.builtin.shell: mvn clean package
 
-- name:
+- name: move file
+  ansible.builtin.shell: mv target/shipping-1.0.jar shipping.jar
