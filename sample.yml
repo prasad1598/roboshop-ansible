@@ -45,9 +45,9 @@
       - 100
       - 200
     z:
-      domine: www.prasaddevops.shop
+      domin: www.prasaddevops.shop
       file: sample.yaml
   tasks:
     - name: print string sample file
       ansible.builtin.debug:
-        msg: x - {{x}}, y - {{y[0]}}, z - {{z[1]}}
+        msg: x - {{x}}, y - {{y[0]}}, z - {{z["domin"]}}
