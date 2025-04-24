@@ -1,0 +1,4 @@
+#  golang() {
+#    dnf install golang -y
+#    cp ${pwd}/${component_name}.service /etc/systemd/system/${component_name}.service
+#  }

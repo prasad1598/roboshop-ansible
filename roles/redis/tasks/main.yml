@@ -7,10 +7,10 @@
 
 
 - name: Enable redis 7
-  ansible.buildin.shell: dnf module disable redis -y ; dnf module enable redis:7 -y
+  ansible.builtin.shell: dnf module disable redis -y ; dnf module enable redis:7 -y
 
 - name: install redis
-  ansible.buildin.dnf:
+  ansible.builtin.dnf:
     name: redis
     state: latest
 
@@ -29,7 +29,7 @@
 
 
 - name: Starting the redis service
-  ansible.buildin.systemd_service:
+  ansible.builtin.systemd_service:
     name: redis
     state: started
     enabled: true

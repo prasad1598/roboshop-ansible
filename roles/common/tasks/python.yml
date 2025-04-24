@@ -1,0 +1,5 @@
+#  python() {
+#    dnf install python3 gcc python3-devel -y
+#    app_pre-req
+#    pip3 install -r requirements.txt
+#  }

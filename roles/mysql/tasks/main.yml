@@ -5,17 +5,17 @@
 
 
 - name: Install mysql
-  ansible.buildin.dnf:
+  ansible.builtin.dnf:
     name: mysql-server
     state: latest
 
 
 - name: Start & enable service
-  ansible.buildin.systemd_service:
+  ansible.builtin.systemd_service:
     name: mysql-server
     state: latest
     enabled: yes
 
 
 - name: Setup Mysql root passwd
-ansible.buildin.shell: mysql_secure_installation --set-root-pass RoboShop@1
+ansible.builtin.shell: mysql_secure_installation --set-root-pass RoboShop@1
