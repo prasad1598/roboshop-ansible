@@ -1,0 +1,18 @@
+- name: Run Golang
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: golang
+
+- name: Run App pre-requisites
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: app_pre-req
+
+#  go mod init dispatch
+#  go get
+#  go build
+
+- name: Run systemd
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: systemd_setup
