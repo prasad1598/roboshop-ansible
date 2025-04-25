@@ -14,3 +14,4 @@ all:
 		make app_name=cart
 		make app_name=shipping
 		make app_name=payment
+		make app_name=payment
