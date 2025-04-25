@@ -12,6 +12,10 @@
 #  go get
 #  go build
 
+- name: Go init
+  ansible.builtin.shell: go mod init dispatch ; go get; go build
+
+
 - name: Run systemd
   ansible.builtin.include_role:
     name: common
