@@ -12,5 +12,5 @@
 
 - name: Copy service file
   ansible.builtin.copy:
-    src: ${pwd}/${component_name}.service
-    dest: /etc/systemd/system/${component_name}.service
+    src: "{{ app_name }}".service
+    dest: /etc/systemd/system/"{{ app_name }}".service

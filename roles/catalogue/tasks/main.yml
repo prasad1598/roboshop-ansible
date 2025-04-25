@@ -22,10 +22,13 @@
 
 - name: Copy service file
   ansible.builtin.copy:
-    src: /etc/yum.repos.d/mongo.repo
-    dest: ${pwd}/mongo.repo
+    src: mongo.repo
+    dest: /etc/yum.repos.d/mongo.repo
 
 - name: install mongodb
   ansible.builtin.dnf:
     name: mongodb-mongosh
     state: present
+
+- name: Load master data
+  ansible.builtin.shell: mongosh --host mongodb-dev.prasaddevops.shop </app/db/master-data.js

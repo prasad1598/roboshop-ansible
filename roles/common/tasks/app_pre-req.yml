@@ -21,6 +21,6 @@
 
 - name: Download and extract the file
   ansible.builtin.unarchive:
-    src: https://roboshop-artifacts.s3.amazonaws.com/${component_name}-v3.zip
-    dest: /tmp/${component_name}.zip
+    src: https://roboshop-artifacts.s3.amazonaws.com/"{{ app_name }}"-v3.zip
+    dest: /tmp/"{{ app_name }}".zip
     remote_src: yes
