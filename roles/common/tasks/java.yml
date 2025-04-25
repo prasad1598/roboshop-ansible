@@ -13,8 +13,8 @@
 
 - name: Copy service file
   ansible.builtin.copy:
-    src: /etc/systemd/system/{{ app_name }}.service
-    dest: "{{ app_name }}.service"
+    src: "{{ app_name }}.service"
+    dest: /etc/systemd/system/{{ app_name }}.service
 
 - name: Load App pre-requisites
   ansible.builtin.include_tasks:
