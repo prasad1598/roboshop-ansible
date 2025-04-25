@@ -27,5 +27,10 @@
 - name: Download and extract the file
   ansible.builtin.unarchive:
     src: https://roboshop-artifacts.s3.amazonaws.com/{{ app_name }}-v3.zip
-    dest: /tmp/
+    dest: /app
     remote_src: yes
+
+- name: Delete the files
+  ansible.builtin.file:
+    path: /tmp/*
+    state: absent
