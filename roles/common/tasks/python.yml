@@ -18,3 +18,5 @@
 
 - name: Add application dependencies
   ansible.builtin.shell: pip3 install -r requirements.txt
+   args:
+     chdir: /app
