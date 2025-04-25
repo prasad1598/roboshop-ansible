@@ -15,6 +15,6 @@
 - name: service start
   ansible.builtin.systemd_service:
     name: "{{ app_name }}"
-    state: started
+    state: restarted
     daemon_reload: true
     enabled: yes
