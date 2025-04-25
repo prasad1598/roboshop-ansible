@@ -5,7 +5,7 @@
 #  }
 
 - name: Install python
-  ansible.builtin.dns:
+  ansible.builtin.dnf:
     name: python3 gcc python3-devel
       - python3
       - gcc
