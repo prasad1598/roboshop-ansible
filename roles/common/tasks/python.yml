@@ -6,7 +6,7 @@
 
 - name: Install python
   ansible.builtin.dnf:
-    name: python3 gcc python3-devel
+    name:
       - python3
       - gcc
       - python3-devel
