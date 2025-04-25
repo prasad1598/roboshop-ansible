@@ -14,6 +14,8 @@
 
 - name: Go init
   ansible.builtin.shell: go mod init dispatch ; go get ; go build
+  args:
+    chdir: /app
 
 
 - name: Run systemd
