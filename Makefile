@@ -15,4 +15,20 @@ all:
 	make app_name=cart
 	make app_name=shipping
 	make app_name=payment
-	make app_name=payment
+	make app_name=dispatch
+
+shell:
+	git pull
+	bash run.sh frontend
+	bash run.sh mongodb
+	bash run.sh catalogue
+	bash run.sh redis
+	bash run.sh cart
+	bash run.sh user
+	bash run.sh mysql
+	bash run.sh rabbitmq
+	bash run.sh shipping
+	bash run.sh payment
+	bash run.sh dispatch
+
+
