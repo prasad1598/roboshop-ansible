@@ -12,7 +12,7 @@
 - name: Start & enable service
   ansible.builtin.systemd_service:
     name: mysql-server
-    state: restarted
+    state: started
     enabled: yes
 
 - name: Setup Mysql root passwd
