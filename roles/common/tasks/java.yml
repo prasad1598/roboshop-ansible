@@ -22,6 +22,8 @@
 
 - name: maven packageing
   ansible.builtin.shell: mvn clean package
+  args:
+    chdir:/app
 
 - name: move file
   ansible.builtin.shell: mv target/shipping-1.0.jar shipping.jar
