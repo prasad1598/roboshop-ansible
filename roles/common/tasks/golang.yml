@@ -8,7 +8,6 @@
   ansible.builtin.dnf:
     name: golang
     state: present
-    enabled: yes
 
 - name: Copy service file
   ansible.builtin.copy:

@@ -1,3 +1,3 @@
 default:
-git pull
-ansible-playbook -i
+	git pull
+	ansible-playbook -i {}
