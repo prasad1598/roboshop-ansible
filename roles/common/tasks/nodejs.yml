@@ -14,7 +14,7 @@
 
 - name: Load app Pre-Requisites
   ansible.builtin.include_tasks:
-    file: app_pre-req
+    file: app_pre-req.yml
 
 - name: Install packages based on package.json.
   community.general.npm:
