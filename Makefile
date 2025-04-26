@@ -3,7 +3,7 @@ default:
 
 	ansible-playbook -i $(app_name)-dev.prasaddevops.online -e ansible_user=ec2-user -e ansible_password=DevOps321 -e app_name=$(app_name) roboshop.yml
 
-all:
+	all:
 		git pull
 		make app_name=frontend
 		make app_name=mongodb
