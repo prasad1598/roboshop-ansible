@@ -28,7 +28,7 @@
 
 - name: Load master-data
   ansible.builtin.shell: mysql -h mysql-dev.prasaddevops.shop -uroot -pRoboShop@1 < /app/db/{{ item }}.sql
-  loops:
+  loop:
     - schema
     - user
     - master-data
