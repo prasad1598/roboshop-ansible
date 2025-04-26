@@ -27,8 +27,7 @@
 #  ansible.builtin.shell: mysql -h mysql-dev.prasaddevops.shop -uroot -pRoboShop@1 < /app/db/master-data.sql
 
 - name: Load to DB
-  ansible.builtin.shell: >
-    mysql -h mysql-dev.prasaddevops.shop -uroot -pRoboShop@1 < /app/db/{{ item }}.sql
+  ansible.builtin.shell: "mysql -h mysql-dev.prasaddevops.shop -uroot -pRoboShop@1 < /app/db/{{ item }}.sql"
   loop:
     - schema
     - user
