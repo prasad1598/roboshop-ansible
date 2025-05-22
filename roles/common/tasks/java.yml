@@ -12,7 +12,7 @@
     state: present
 
 - name: Copy service file
-  ansible.builtin.copy:
+  ansible.builtin.template:
     src: "{{ app_name }}.service"
     dest: /etc/systemd/system/{{ app_name }}.service
 

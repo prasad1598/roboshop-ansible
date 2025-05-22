@@ -12,4 +12,4 @@
         msg: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=Demo/data/ssh:passwd token={{ token }} url=http://vault.prasaddevops.shop:8200') }}"
 
 
-#  "{{ lookup('community.hashi_vault.hashi_vault', 'secret=roboshop-infra/data/frontend:catalogue_url token={{ token }} url=http://vault-int.prasaddevops.shop:8200') }}"
+#  "{{ lookup('community.hashi_vault.hashi_vault', 'secret=roboshop-infra/data/{{ app_name }}:AMQP_HOST token={{ token }} url=http://vault-int.prasaddevops.shop:8200') }}"
