@@ -15,7 +15,6 @@ all:
 	make app_name=cart
 	make app_name=shipping
 	make app_name=payment
-	make app_name=dispatch
 
 shell:
 	git pull
@@ -29,6 +28,3 @@ shell:
 	bash run.sh rabbitmq
 	bash run.sh shipping
 	bash run.sh payment
-	bash run.sh dispatch
-
-
