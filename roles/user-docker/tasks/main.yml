@@ -10,7 +10,6 @@
     state: started
     ports:
       - "8080:8080"
-
     env:
       MONGO: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=roboshop-infra/data/{{ app_name }}:MONGO token={{ token }} url=http://vault-int.prasaddevops.shop:8200') }}"
       MONGO_URL: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=roboshop-infra/data/{{ app_name }}:MONGO_URL token={{ token }} url=http://vault-int.prasaddevops.shop:8200') }}"
