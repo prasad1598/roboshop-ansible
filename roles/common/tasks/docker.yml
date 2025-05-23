@@ -5,7 +5,7 @@
 
 - name: install docker
   ansible.builtin.dnf:
-    name: docker
+    name: docker-ce
     state: present
 
 - name: install docker
