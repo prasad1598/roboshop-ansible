@@ -19,7 +19,7 @@
 
 - name: Run Catalogue Schema Container
   community.docker.docker_container:
-    name: catalogue master-data
+    name: catalogue-Schema
     image: public.ecr.aws/w8x4g9h7/roboshop-v3/schema-load
     state: started
     env:
