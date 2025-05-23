@@ -9,7 +9,7 @@
     state: installed
 
 - name: install docker
-  ansible.builtin.service:
+  ansible.builtin.systemd_service:
     name: docker
     state: restarted
     enabled: yes
