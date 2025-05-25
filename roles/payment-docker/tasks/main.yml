@@ -18,3 +18,4 @@
       USER_PORT: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=roboshop-infra/data/{{ app_name }}:USER_PORT token={{ token }} url=http://vault-int.prasaddevops.shop:8200') }}"
       AMQP_USER: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=roboshop-infra/data/{{ app_name }}:AMQP_USER token={{ token }} url=http://vault-int.prasaddevops.shop:8200') }}"
       AMQP_PASS: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=roboshop-infra/data/{{ app_name }}:AMQP_PASS token={{ token }} url=http://vault-int.prasaddevops.shop:8200') }}"
+      AMQP_HOST: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=roboshop-infra/data/{{ app_name }}:AMQP_HOST token={{ token }} url=http://vault-int.prasaddevops.shop:8200') }}"
